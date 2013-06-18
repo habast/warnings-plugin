@@ -317,6 +317,8 @@ public class WarningsPublisher extends HealthAwareRecorder {
             List<ParserResult> fileResults = parseFiles(build, logger);
             List<ParserResult> consoleResults = parseConsoleLog(build, logger);
 
+            // totals enthält alle warnings
+
             ParserResult totals = new ParserResult();
             add(totals, consoleResults);
             add(totals, fileResults);

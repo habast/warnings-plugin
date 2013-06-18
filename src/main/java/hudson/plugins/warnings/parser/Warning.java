@@ -1,10 +1,10 @@
 package hudson.plugins.warnings.parser;
 
+import org.apache.commons.lang.StringUtils;
+
 import hudson.plugins.analysis.util.model.AbstractAnnotation;
 import hudson.plugins.analysis.util.model.FileAnnotation;
 import hudson.plugins.analysis.util.model.Priority;
-
-import org.apache.commons.lang.StringUtils;
 
 /**
  * A serializable Java Bean class representing a warning.
@@ -38,6 +38,7 @@ public class Warning extends AbstractAnnotation {
      * @param message
      *            the message of the warning
      */
+    //1.
     public Warning(final String fileName, final int start, final String type, final String category, final String message) {
         this(fileName, start, type, category, message, Priority.NORMAL);
     }
@@ -58,6 +59,7 @@ public class Warning extends AbstractAnnotation {
      * @param priority
      *            the priority of the warning
      */
+    //2.
     public Warning(final String fileName, final int start, final String type, final String category, final String message, final Priority priority) {
         super(priority, message, start, start, category, type);
 
